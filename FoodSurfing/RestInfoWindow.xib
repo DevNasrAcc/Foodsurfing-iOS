@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmaticSC-Bold.ttf">
+            <string>AmaticSC-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RestInfoWindow" customModule="FoodSurfing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-settings" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-sB-J6C">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i42-Gd-046">
+                    <rect key="frame" x="8" y="12" width="187.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="o1c-4h-eCJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmaticSC-Bold" family="Amatic SC" pointSize="21"/>
+                    <color key="textColor" red="0.83921568629999999" green="0.1019607843" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grill Khan" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPd-7t-L3P">
+                    <rect key="frame" x="179.5" y="10" width="187.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="RKA-Td-x4P"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0300 2568855" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQz-JD-wjG">
+                    <rect key="frame" x="180" y="33" width="187.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="lKg-Xt-elA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harmoniestrabe 59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKn-TK-gB7">
+                    <rect key="frame" x="8" y="75" width="359" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="g4b-Rm-FAY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypb-yJ-ybO">
+                    <rect key="frame" x="0.0" y="125" width="375" height="45"/>
+                    <color key="backgroundColor" red="0.83921568629999999" green="0.1019607843" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Frx-Ec-Zqf"/>
+                    </constraints>
+                    <state key="normal" title="Auschecken">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnDoneAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vUI-F2-iDP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ypb-yJ-ybO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0ca-EE-K1a"/>
+                <constraint firstItem="sPd-7t-L3P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="1Rl-1P-4vH"/>
+                <constraint firstItem="i42-Gd-046" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="3ld-e4-IBd"/>
+                <constraint firstItem="hKn-TK-gB7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="6Yr-9w-1W3"/>
+                <constraint firstItem="NrM-sB-J6C" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="7ck-fl-qj9"/>
+                <constraint firstItem="gQz-JD-wjG" firstAttribute="trailing" secondItem="sPd-7t-L3P" secondAttribute="trailing" id="ICK-ez-PGt"/>
+                <constraint firstItem="ypb-yJ-ybO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="J9v-Vg-WR6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hKn-TK-gB7" secondAttribute="trailing" constant="8" id="T7p-kW-OCk"/>
+                <constraint firstItem="gQz-JD-wjG" firstAttribute="top" secondItem="i42-Gd-046" secondAttribute="bottom" id="XQi-Rp-q1j"/>
+                <constraint firstItem="NrM-sB-J6C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bDu-UB-jvQ"/>
+                <constraint firstItem="i42-Gd-046" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="cLw-cV-OxF"/>
+                <constraint firstItem="gQz-JD-wjG" firstAttribute="leading" secondItem="sPd-7t-L3P" secondAttribute="leading" id="d6C-rf-Y1c"/>
+                <constraint firstItem="NrM-sB-J6C" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ejD-ry-was"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sPd-7t-L3P" secondAttribute="trailing" constant="8" id="jlK-VA-nqz"/>
+                <constraint firstItem="hKn-TK-gB7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lLk-f8-aa6"/>
+                <constraint firstItem="sPd-7t-L3P" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="oDs-Yy-rKE"/>
+                <constraint firstItem="ypb-yJ-ybO" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="pl7-yB-ySG"/>
+                <constraint firstItem="i42-Gd-046" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="pru-py-v3g"/>
+                <constraint firstItem="NrM-sB-J6C" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="zzz-iz-tWP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lblAddress" destination="hKn-TK-gB7" id="KTv-x3-9il"/>
+                <outlet property="lblContact" destination="sPd-7t-L3P" id="jcD-nb-uMJ"/>
+                <outlet property="lblPhone" destination="gQz-JD-wjG" id="DCX-v2-3Pm"/>
+                <outlet property="lblTitle" destination="i42-Gd-046" id="DDH-8k-udS"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="-196"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg-settings" width="320" height="569"/>
+    </resources>
+</document>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PaymentModeSelectionView" customModule="FoodSurfing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="237"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4E5-cJ-v2T" userLabel="headerView">
+                    <rect key="frame" x="0.0" y="0.0" width="327" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zahlungsmöglichkeiten auswählen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-Co-C7N">
+                            <rect key="frame" x="4" y="4" width="261.5" height="37"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jh-2O-0B9">
+                            <rect key="frame" x="290" y="8" width="29" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2jh-2O-0B9" secondAttribute="height" multiplier="1:1" id="kkI-Hx-d7Z"/>
+                            </constraints>
+                            <state key="normal" image="cross-icon-white"/>
+                            <connections>
+                                <action selector="btnCrossAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="4xE-XR-Lor"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.83921568629999999" green="0.1019607843" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="A27-BP-5Jb"/>
+                        <constraint firstAttribute="trailing" secondItem="2jh-2O-0B9" secondAttribute="trailing" constant="8" id="DKA-MM-ZJF"/>
+                        <constraint firstItem="Dla-Co-C7N" firstAttribute="leading" secondItem="4E5-cJ-v2T" secondAttribute="leading" constant="4" id="Ozk-pt-6QS"/>
+                        <constraint firstAttribute="bottom" secondItem="Dla-Co-C7N" secondAttribute="bottom" constant="4" id="W5m-al-g78"/>
+                        <constraint firstItem="2jh-2O-0B9" firstAttribute="top" secondItem="4E5-cJ-v2T" secondAttribute="top" constant="8" id="Xyt-Gf-OqJ"/>
+                        <constraint firstAttribute="bottom" secondItem="2jh-2O-0B9" secondAttribute="bottom" constant="8" id="ZoT-Ke-5nY"/>
+                        <constraint firstItem="Dla-Co-C7N" firstAttribute="top" secondItem="4E5-cJ-v2T" secondAttribute="top" constant="4" id="eZ1-Um-etY"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QNx-qP-gBQ">
+                    <rect key="frame" x="16" y="69" width="295" height="104"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whh-bx-TZ9">
+                            <rect key="frame" x="0.0" y="0.0" width="143.5" height="104"/>
+                            <state key="normal" image="visa-unchecked"/>
+                            <connections>
+                                <action selector="btnVisaAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ls0-Sr-ExU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYC-j4-dRN">
+                            <rect key="frame" x="151.5" y="0.0" width="143.5" height="104"/>
+                            <state key="normal" image="paypal-unchecked"/>
+                            <connections>
+                                <action selector="btnPaypalAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="exv-cH-aeh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QNx-qP-gBQ" secondAttribute="height" multiplier="295:104" id="xDJ-7F-TAS"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RZ-qn-ddD">
+                    <rect key="frame" x="0.0" y="197" width="327" height="40"/>
+                    <color key="backgroundColor" red="0.83921568629999999" green="0.1019607843" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="uhl-T7-ubl"/>
+                    </constraints>
+                    <state key="normal" title="Bezahlen">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSectionAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fdi-Wp-dTV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4E5-cJ-v2T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0yE-LR-oOO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QNx-qP-gBQ" secondAttribute="trailing" constant="16" id="9ow-dD-d93"/>
+                <constraint firstItem="4E5-cJ-v2T" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="BKi-rS-xr0"/>
+                <constraint firstItem="QNx-qP-gBQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="EtC-wh-tKV"/>
+                <constraint firstItem="QNx-qP-gBQ" firstAttribute="top" secondItem="4E5-cJ-v2T" secondAttribute="bottom" constant="24" id="Ofk-9D-Nok"/>
+                <constraint firstItem="6RZ-qn-ddD" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ZwV-xI-dNV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6RZ-qn-ddD" secondAttribute="trailing" id="bSt-H8-UK6"/>
+                <constraint firstItem="6RZ-qn-ddD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lf8-vQ-gZx"/>
+                <constraint firstItem="6RZ-qn-ddD" firstAttribute="top" secondItem="QNx-qP-gBQ" secondAttribute="bottom" constant="24" id="pA8-3Q-aZg"/>
+                <constraint firstItem="4E5-cJ-v2T" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="w1l-19-vW0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnPaypal" destination="JYC-j4-dRN" id="Y2v-u1-NEi"/>
+                <outlet property="btnVisa" destination="Whh-bx-TZ9" id="ADy-Eo-l62"/>
+            </connections>
+            <point key="canvasLocation" x="1.5" y="-165"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross-icon-white" width="24" height="24"/>
+        <image name="paypal-unchecked" width="140" height="80"/>
+        <image name="visa-unchecked" width="140" height="80"/>
+    </resources>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" alpha="0.92000001668930054" contentMode="scaleToFill" id="RFu-Ml-Jmk" customClass="CalendarView" customModule="FoodSurfing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="285"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x6Z-QB-jei">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="imF-6C-8MY"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="515833633.39078701">
+                        <!--2017-05-07 07:07:13 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDd-dB-AQB">
+                    <rect key="frame" x="0.0" y="250" width="375" height="35"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="hgi-M7-ieX"/>
+                    </constraints>
+                    <state key="normal" title="Choose">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="actionDateSelected:" destination="RFu-Ml-Jmk" eventType="touchUpInside" id="F5t-Rp-o9d"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.035294117649999998" green="0.039215686270000001" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="x6Z-QB-jei" firstAttribute="leading" secondItem="RFu-Ml-Jmk" secondAttribute="leading" id="5yr-pv-IhC"/>
+                <constraint firstItem="x6Z-QB-jei" firstAttribute="top" secondItem="RFu-Ml-Jmk" secondAttribute="top" id="NJm-x6-mSx"/>
+                <constraint firstItem="FDd-dB-AQB" firstAttribute="top" secondItem="x6Z-QB-jei" secondAttribute="bottom" id="Pw1-tl-o28"/>
+                <constraint firstAttribute="trailing" secondItem="FDd-dB-AQB" secondAttribute="trailing" id="Wyz-kH-UBQ"/>
+                <constraint firstItem="FDd-dB-AQB" firstAttribute="leading" secondItem="RFu-Ml-Jmk" secondAttribute="leading" id="YGd-64-0bw"/>
+                <constraint firstAttribute="trailing" secondItem="x6Z-QB-jei" secondAttribute="trailing" id="phw-JH-6c8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="x6Z-QB-jei" id="f2N-1o-F2T"/>
+            </connections>
+            <point key="canvasLocation" x="18.5" y="-331.5"/>
+        </view>
+    </objects>
+</document>
